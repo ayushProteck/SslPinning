@@ -4,20 +4,21 @@ React-Native ssl pinning & public key pinning using OkHttp 3 in Android, and AFN
 ## NOTES:
 for RN 0.60.0 or later use react-native-ssl-pinning@latest
 ## Getting started
-> $ npm install react-native-ssl-pinning --save
-
+```sh
+npm install react-native-ssl-pinning --save
+```
 ## Mostly automatic installation
 If you are using React Native 0.60.+ the link should happen automatically. in iOS run pod install
-
-> $ react-native link react-native-ssl-pinning
-
+```sh
+react-native link react-native-ssl-pinning
+```
 ## Usage
 ### Create the certificates:
-1. openssl s_client -showcerts -servername google.com -connect google.com:443 </dev/null
+1. ``openssl s_client -showcerts -servername google.com -connect google.com:443 </dev/null``
 
 2. Copy the certificate (Usally the first one in the chain), and paste it using nano or other editor like so , nano mycert.pem
 
-3. convert it to .cer with this command openssl x509 -in mycert.pem -outform der -out mycert.cer
+3. convert it to .cer with this command ``openssl x509 -in mycert.pem -outform der -out mycert.cer``
 
 For more ways to obtain the server certificate please refer:
 https://stackoverflow.com/questions/7885785/using-openssl-to-get-the-certificate-from-a-server
@@ -144,3 +145,5 @@ getCookies('domain')
 })
 ~~~
 
+```
+```
